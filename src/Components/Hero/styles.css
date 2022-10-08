@@ -159,11 +159,11 @@
   box-shadow: 0 0 2rem #000;
 }
 
-.modal-bear {
-  height: 80%;
-  width: auto;
+.modal-mascot {
+  height: auto;
+  width: 20rem;
   position: absolute;
-  top: calc(50% - 40%);
+  bottom: 4rem;
   left: 1rem;
 }
 .modal-info {
@@ -183,6 +183,17 @@
   top: 5rem;
 }
 
+.modal-material-text{
+    max-width: 30rem;
+    color: var(--darkFont);
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10rem;
+}
+
 .material-label {
     color: #000;
     font-size: 1.2rem;
@@ -190,8 +201,8 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     position: absolute;
-    top: 5rem;
-    left: 2rem;
+    top: 7rem;
+    left: .5rem;
 }
 
 .modal-state {

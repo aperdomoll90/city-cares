@@ -1,61 +1,87 @@
 .info-section {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #1a2e43 !important;
-  background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.1) 0%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
-}
-
-.grid-wrapper {
-  display: grid;
-  grid-template-columns: 200px 200px 200px 200px 200px;
-  grid-template-rows: 200px;
-  column-gap: 10px;
-  row-gap: 15px;
-}
-
-.small-block-grid-4 {
-  margin-left: 500px;
-  margin-top: 200px;
-}
-
-ul > li {
-  display: inline-block;
-  margin: 30px;
-  /* You can also add some margins here to make it look prettier */
+  background-color: var(--backgroundColor);
 }
 
 .vid-frame {
+  height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
-  right: 0;
-  margin-top: 50px;
-  margin-right: 150px;
-}
-
-.grass {
-  position: absolute;
-  bottom: 0;
-}
-.grass2 {
-  position: absolute;
   bottom: 0;
   right: 0;
+  left: 0;
+
 }
 
-li > img:hover {
+
+.bins:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
   transition: 1s ease;
   cursor: pointer;
+}
+
+.video-modal{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 20;
+}
+
+.HappyFrenchie{
+  height: 23rem;
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  z-index: 15;
+}
+.hill{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.firstHill{
+  height: 5rem;
+  clip-path: path("M-15 104H1356L1253 71.0002L1177 57.5003L1095 51.0003H980.5L792.5 62.0003L698.5 42.0003H641.5H406L370.5 34.5003C370.5 34.5003 263 -3.30435 254 1.00025C241 7.21801 134.5 25.9999 134.5 25.9999C42.5 62.9999 -15 76.5002 -15 76.5002V104Z");
+  background: #D16453;
+  z-index: 10;
+}
+.secondHill{
+  width: 100vw;
+  min-height: 12rem;
+  clip-path: path("M186 86.9999C57.127 144.212 113.873 101.788 -15 159V252H1500.5V208.5C1500.5 208.5 1483 185.5 1212 169C941 152.5 381 2.33128 359 0.999767C337 -0.331748 186 86.9999 186 86.9999Z");
+  background: #C15149;
+  z-index: 3;
+}
+
+.rockLine{
+  height: 22rem;
+  clip-path: path("M73.5 155.5L-18 108.5V412H1496.5L1500 171.5L1470 176L1457 196.5L1430 222L1392.5 227.5L1384 218.5L1371.5 171.5H1342.5L1316 238H1272.5L1233.5 227.5L1226.5 208.5L1192 200.5L1178.5 218.5L1158.5 227.5L1091.5 222L1066 208.5L1046 171.5V126.5L965.5 143.5V188.5H897.5L878.5 137.5H838.5L803.5 214L749.5 208.5L711.5 171.5L693.5 137.5L675 126.5L647 143.5H626.5L608.5 137.5L592.5 108.5H558.5L539 126.5L481 120L430 1L394 6L361.5 25.5L328.5 108.5L270 103.5L237.5 108.5L190.5 171.5H140L111.5 133.5H87L73.5 155.5Z");
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.lastHill{
+  width: 100vw;
+  z-index: 1;
+}
+
+.trash-grid{
+  width: 60vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 15;
 }
