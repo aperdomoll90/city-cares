@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <section id='hero-wrapper'>
       <img className='hero-title' src={heroTitle} alt='Hero Title' />
-      <p className='hero-comment'>Upload a picture to see where should your waste go!</p>
+      <p className='hero-comment'>Upload a picture to save the world!</p>
       <div className='hero-image-container'>
         <img className='planet' src={planet} alt='3d cartoon planet' />
         <img className='cloudOne' src={cloudOne} alt='3d cloud' />
