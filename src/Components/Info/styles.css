@@ -6,11 +6,36 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1a2e43;
+  background-color: #1a2e43 !important;
   background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.1) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, transparent 100%);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+}
+
+.grid-wrapper {
+  display: grid;
+  /* grid-auto-rows: minmax(100px, auto); */
+  grid-template-columns: 100px 50px 100px;
+  /* grid-template-rows: 80px auto 80px; */
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+.one {
+  background-color: white;
+}
+.two {
+  background-color: white;
+}
+.three {
+  background-color: white;
+}
+.four {
+  background-color: white;
+}
+.five {
+  background-color: white;
 }
