@@ -1,18 +1,50 @@
 import React, { useState } from "react";
 import styles from './styles.css'
 export default function UploadButton({setModalInfo,setOpenModal}) {
+  const [imageData, setInput] = useState();
 
-  function treat(e) {
-    const { files } = e.target;
-    let images = [];
-    const selecteds = [...[...files]];
-
-    selecteds.forEach(i => images.push(URL.createObjectURL(i)));
-
-    // setModalInfo(images)
-    setModalInfo('images test')
-    setOpenModal(true)
+  function uploadImage(e) {
+    const { files } = e.target.files[0];
+    setInput(files);
+    console.log(imageData)
+    setInput(imageData)
+    handleSubmitFile()
   }
+
+    // Image/File Submit Handler
+    const handleSubmitFile = () => {
+      if (imageData !== null) {
+        var data = new FormData();
+        data.append("data", imageData);
+    
+        fetch("http://localhost:8910/taskCreationController/createStoryTask", {
+          method: "POST",
+          headers: {
+            "Content-Type": "multipart/form-data",
+            "Accept": "application/json",
+            "type": "formData"
+          },
+          body: data
+        }).then(function (res) {
+          if (res.ok) {
+            alert("Perfect! ");
+            setModalInfo(imageData)
+            setOpenModal(true)
+        
+          } else if (res.status === 401) {
+            alert("Oops! ");
+          }
+        }, function (e) {
+          setModalInfo(imageData)
+          // setModalInfo('images test')
+          setOpenModal(true)
+      
+        });
+    
+      }
+    }
+  
+  
 
   return (
     <div id='UploadButton' >
@@ -36,7 +68,7 @@ export default function UploadButton({setModalInfo,setOpenModal}) {
           </defs>
         </svg>
         <span>
-          <input id="file-input" type="file" accept="image/*" multiple={false} onChange={treat} />
+          <input id="file-input" type="file" accept="image/*" multiple={false} onChange={uploadImage} />
         </span>
       </label>
     </div>
