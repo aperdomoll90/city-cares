@@ -46,6 +46,11 @@ ul > li {
   position: absolute;
   bottom: 0;
 }
+.grass2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 
 li > img:hover {
   -webkit-transform: scale(1.1);

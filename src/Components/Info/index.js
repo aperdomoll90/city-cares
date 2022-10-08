@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 // const trash = require("../../Media/trash.png");
 const grass = require("../../Media/grass.png");
+const grass2 = require("../../Media/Vector 3.png");
 const glass = require("../../Media/glass-bin.png");
 const paper = require("../../Media/paper-bin.png");
 const metal = require("../../Media/metal-bin.png");
@@ -9,10 +10,15 @@ const plastic = require("../../Media/plastic-bin.png");
 
 export default function Index() {
   const [modal, setModal] = useState(false);
+  const [url, setUrl] = useState("");
 
   const openModal = () => {
     setModal(!modal);
-    // console.log("clicked!");
+    setUrl("vhpc0UULjDU");
+  };
+  const openModal2 = () => {
+    setModal(!modal);
+    setUrl("BS-gN6jiXw4");
   };
 
   return (
@@ -33,7 +39,7 @@ export default function Index() {
                 loading="lazy"
                 width="700"
                 height="300"
-                src="https://www.youtube.com/embed/vhpc0UULjDU"
+                src={`https://www.youtube.com/embed/${url}`}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -42,7 +48,7 @@ export default function Index() {
           </li>
           <li style={{ listStyle: "none" }}>
             <img
-              onClick={openModal}
+              onClick={openModal2}
               className="bins"
               width={133}
               src={paper}
@@ -69,6 +75,7 @@ export default function Index() {
           </li>
         </ul>
         <img className="grass" src={grass} alt="illustrated grass" />
+        <img className="grass2" src={grass2} alt="illustrated grass" />
       </div>
     </>
   );
