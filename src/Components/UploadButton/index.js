@@ -8,40 +8,28 @@ export default function UploadButton({ setModalInfo, setOpenModal }) {
     setInput(files);
     console.log(imageData);
     setInput(imageData);
-    handleSubmitFile();
+    handleSubmitFile(e.target.files[0]);
   }
 
   // Image/File Submit Handler
-  const handleSubmitFile = () => {
+  const handleSubmitFile = (files) => {
     if (imageData !== null) {
       var data = new FormData();
-      data.append("data", imageData);
+      data.append("file", files);
 
-      fetch("http://localhost:8910/taskCreationController/createStoryTask", {
+      fetch("http://127.0.0.1:5000", {
         method: "POST",
-        headers: {
-          "Content-Type": "multipart/form-data",
-          Accept: "application/json",
-          type: "formData",
-        },
+        // headers: {
+        //   "Content-Type": "multipart/form-data",
+        //   Accept: "application/json",
+        //   type: "formData",
+        // },
         body: data,
-      }).then(
-        function (res) {
-          if (res.ok) {
-            alert("Perfect! ");
-            setModalInfo(imageData);
-            setOpenModal(true);
-          } else if (res.status === 401) {
-            alert("Oops! ");
-          }
-        },
-        function (e) {
-          // setModalInfo(imageData);
-          setModalInfo({material:'glass', recyclable:true})
-          // setModalInfo({material:'compost', recyclable:false})
-          setOpenModal(true);
-        }
-      );
+      }).then(res => res.json())
+        .then(data => {
+          setModalInfo(data)
+          setOpenModal(true)
+        }).catch(err => console.error(err))
     }
   };
 
