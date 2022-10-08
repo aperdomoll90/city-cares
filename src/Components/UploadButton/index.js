@@ -37,7 +37,8 @@ export default function UploadButton({ setModalInfo, setOpenModal }) {
         },
         function (e) {
           // setModalInfo(imageData);
-          setModalInfo({material:'metal', recyclable:true})
+          setModalInfo({material:'glass', recyclable:true})
+          // setModalInfo({material:'compost', recyclable:false})
           setOpenModal(true);
         }
       );

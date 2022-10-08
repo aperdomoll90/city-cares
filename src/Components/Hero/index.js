@@ -7,6 +7,7 @@ const cloudOne = require('../../Media/cloudOne.png')
 const cloudTwo = require('../../Media/cloudTwo.png')
 const cloudThree = require('../../Media/cloudThree.png')
 const bear = require('../../Media/citycarebear.png')
+const seatingFrenchie = require('../../Media/seatingFrenchie.png')
 
 const modalGlass = require('../../Media/glass.png')
 const modalMetal = require('../../Media/metal.png')
@@ -54,11 +55,12 @@ export default function Hero() {
             <div className='close-button' onClick={() => setOpenModal(false)}>
               X
             </div>
-            <img className='modal-bear' src={bear} alt='3d cloud' />
+            <img className='modal-mascot' src={modalInfo.recyclable ? bear : seatingFrenchie} alt='3d cloud' />
             <div className='modal-info'>
-              <p className='material-label'>{modalInfo.material}</p>
-              <img className='modal-material' src={getMaterialImage(modalInfo.material)} />
-              <p className='modal-state'>Recyclable</p>
+              <p className='material-label'>{modalInfo.recyclable ? `${modalInfo.material}:`: 'Sorry:'}</p>
+              {modalInfo.recyclable ? <img className='modal-material' src={getMaterialImage(modalInfo.material)} /> : <p className='modal-material-text'> I don't know, probably compost... check with an adult </p>}
+
+              <p className='modal-state'>{modalInfo.recyclable ? 'Recyclable' : 'Not Recyclable'} </p>
             </div>
           </div>
         </div>
