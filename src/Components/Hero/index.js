@@ -8,9 +8,34 @@ const cloudTwo = require('../../Media/cloudTwo.png')
 const cloudThree = require('../../Media/cloudThree.png')
 const bear = require('../../Media/citycarebear.png')
 
+const metal = require('../../Media/metal.png')
+const paper = require('../../Media/paper.png')
+const glass = require('../../Media/glass.png')
+const plastic = require('../../Media/plastic.png')
+
 export default function Hero() {
-  const [modalInfo, setModalInfo] = useState([])
-  const [openModal, setOpenModal] = useState(false)
+  const [modalInfo, setModalInfo] = useState({material:'glass', recyclable:true})
+  const [openModal, setOpenModal] = useState(true)
+
+    const getMaterialImage = material => {
+      console.log('material is', material)
+    switch (material) {
+      case 'glass':
+        console.log('its glass')
+        break
+      case 'metal':
+        console.log('its metal')
+        break
+      case 'plastic':
+        console.log('its plastic')
+        break
+      case 'paper':
+        console.log('its paper')
+        break
+      default:
+        console.log('Sorry!!!')
+    }
+  }
 
   return (
     <section id='hero-wrapper'>
@@ -30,6 +55,11 @@ export default function Hero() {
               X
             </div>
             <img className='modal-bear' src={bear} alt='3d cloud' />
+            <div className='modal-info'>
+              <p className='modal-material'>{getMaterialImage(modalInfo.material)}</p>
+
+              <p className='modal-state'>Recyclable</p>
+            </div>
           </div>
         </div>
       )}
