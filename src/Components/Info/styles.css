@@ -17,25 +17,40 @@
 
 .grid-wrapper {
   display: grid;
-  /* grid-auto-rows: minmax(100px, auto); */
-  grid-template-columns: 100px 50px 100px;
-  /* grid-template-rows: 80px auto 80px; */
+  grid-template-columns: 200px 200px 200px 200px 200px;
+  grid-template-rows: 200px;
   column-gap: 10px;
   row-gap: 15px;
 }
 
-.one {
-  background-color: white;
+.small-block-grid-4 {
+  margin-left: 500px;
+  margin-top: 200px;
 }
-.two {
-  background-color: white;
+
+ul > li {
+  display: inline-block;
+  margin: 30px;
+  /* You can also add some margins here to make it look prettier */
 }
-.three {
-  background-color: white;
+
+.vid-frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 50px;
+  margin-right: 150px;
 }
-.four {
-  background-color: white;
+
+.grass {
+  position: absolute;
+  bottom: 0;
 }
-.five {
-  background-color: white;
+
+li > img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 1s ease;
+  cursor: pointer;
 }
