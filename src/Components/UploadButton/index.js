@@ -36,8 +36,8 @@ export default function UploadButton({ setModalInfo, setOpenModal }) {
           }
         },
         function (e) {
-          setModalInfo(imageData);
-          // setModalInfo('images test')
+          // setModalInfo(imageData);
+          setModalInfo({material:'metal', recyclable:true})
           setOpenModal(true);
         }
       );
