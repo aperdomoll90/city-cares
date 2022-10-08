@@ -19,7 +19,11 @@ export default function Hero() {
         <img className='cloudTwo' src={cloudTwo} alt='3d cloud' />
         <img className='cloudThree' src={cloudThree} alt='3d cloud' />
           </div>
-          {/* <UploadButton/> */}
+          <UploadButton/>
+
+          <div className="logo">
+
+          </div>
     </section>
   )
 }

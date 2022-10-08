@@ -1,9 +1,16 @@
+.logo{
+    position: absolute;
+    top: 1rem;
+    left:1.5rem;
+}
+
 .hero-title {
   position: absolute;
   top: 35%;
   left: 5%;
   z-index: 10;
 }
+
 .hero-comment {
   color: var(--darkFont);
   font-style: italic;
