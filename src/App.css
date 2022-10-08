@@ -5,18 +5,16 @@
   box-sizing: border-box;
 }
 :root {
-  --backgroundColor:#B8F4FF;
-  --darkFont:#798185;
+  --backgroundColor: #b8f4ff;
+  --darkFont: #798185;
 }
 html {
   scroll-behavior: smooth;
 }
 
-
-
 .App {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   overflow: hidden;
   position: relative;
   display: flex;
@@ -25,10 +23,10 @@ html {
   align-items: center;
   padding: 0;
   background: var(--backgroundColor);
-  font-family: 'Montserrat', sans-serif;
-font-family: 'Roboto', sans-serif;
-  /* background: linear-gradient(to bottom, var(--backgroundColor) 25%, transparent),radial-gradient(ellipse at bottom right,#151e64, #050a32 15%, #000013 40%); */
-   /* background-size: 300% 300%;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  /* background: linear-gradient(to bottom, var(--backgroundColor) 25%, transparent),radial-gradient(ellipse at bottom right,#151e64, #050a32 15%, #000013 40%);
+ background-size: 300% 300%;
   animation: gradient 15s ease infinite; */
 }
 section {
