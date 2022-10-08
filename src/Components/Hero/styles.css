@@ -107,3 +107,59 @@
     transform: translateX(-25%);
   }
 }
+
+
+/* Modal */
+.modal-wrapper{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.691);
+    z-index: 100;
+}
+.modal-container{
+    height: 70vh;
+    width: 60vw;
+    border-radius: 15px;
+    position: absolute;
+    top:calc(50% - 35vh);
+    left:calc(50% - 30vw);
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 5rem #000;
+
+}
+
+.close-button {
+    min-height: 2rem;
+    min-width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    outline: 0.5rem #fff solid;
+    background: linear-gradient(to top, #b2bdc5 50%, #c2e1b8 50%);
+    background-size: 100% 200%;
+    background-position: 0 -100%;
+    transition: all 0.15s ease;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    box-shadow: 0 0 1rem #000;
+  }
+
+  .close-button:hover {
+    background-position: 0 -50%;
+    box-shadow: 0 0 2rem #000;
+  }
+
+  .modal-bear{
+    height: 80%;
+    width: auto;
+    position: absolute;
+    top:calc(50% - 40%);
+    left: 1rem;
+  }

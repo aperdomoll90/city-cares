@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import styles from './styles.css'
-export default function UploadButton() {
-  const [input, setInput] = useState([]);
+export default function UploadButton({setModalInfo,setOpenModal}) {
 
-  function _treat(e) {
+  function treat(e) {
     const { files } = e.target;
     let images = [];
     const selecteds = [...[...files]];
 
     selecteds.forEach(i => images.push(URL.createObjectURL(i)));
 
-    setInput(images);
+    // setModalInfo(images)
+    setModalInfo('images test')
+    setOpenModal(true)
   }
 
   return (
@@ -35,7 +36,7 @@ export default function UploadButton() {
           </defs>
         </svg>
         <span>
-          <input id="file-input" type="file" accept="image/*" multiple={false} onChange={_treat} />
+          <input id="file-input" type="file" accept="image/*" multiple={false} onChange={treat} />
         </span>
       </label>
     </div>
