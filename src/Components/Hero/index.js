@@ -1,12 +1,11 @@
-import React from 'react'
-import UploadButton from '../UploadButton'
-import styles from './styles.css'
-const heroTitle = require('../../Media/heroTitle.png')
-const planet = require('../../Media/planet.png')
-const cloudOne = require('../../Media/cloudOne.png')
-const cloudTwo = require('../../Media/cloudTwo.png')
-const cloudThree = require('../../Media/cloudThree.png')
-
+import React from "react";
+import UploadButton from "../UploadButton";
+import "./styles.css";
+const heroTitle = require("../../Media/heroTitle.png");
+const planet = require("../../Media/planet.png");
+const cloudOne = require("../../Media/cloudOne.png");
+const cloudTwo = require("../../Media/cloudTwo.png");
+const cloudThree = require("../../Media/cloudThree.png");
 
 export default function Hero() {
   return (
@@ -25,5 +24,5 @@ export default function Hero() {
 
           </div>
     </section>
-  )
+  );
 }
