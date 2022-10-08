@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./styles.css";
 // const trash = require("../../Media/trash.png");
 const grass = require("../../Media/grass.png");
-const glass = require("../../Media/glass.png");
-const paper = require("../../Media/paper.png");
-const metal = require("../../Media/metal.png");
-const plastic = require("../../Media/plastic.png");
+const glass = require("../../Media/glass-bin.png");
+const paper = require("../../Media/paper-bin.png");
+const metal = require("../../Media/metal-bin.png");
+const plastic = require("../../Media/plastic-bin.png");
 
 export default function Index() {
   const [modal, setModal] = useState(false);
