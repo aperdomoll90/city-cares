@@ -49,9 +49,9 @@
 }
 .secondHill {
   width: 100vw;
-  min-height: 12rem;
+  min-height: 15rem;
   clip-path: path('M186 86.9999C57.127 144.212 113.873 101.788 -15 159V252H1500.5V208.5C1500.5 208.5 1483 185.5 1212 169C941 152.5 381 2.33128 359 0.999767C337 -0.331748 186 86.9999 186 86.9999Z');
-  background: #c15149;
+  background: #6DB04C;
   z-index: 3;
 }
 
@@ -77,8 +77,11 @@
 
 .lastHill {
   width: 100vw;
+  min-height: 40rem;
   z-index: 1;
 }
+
+
 
 .trash-grid {
   width: 60vw;
