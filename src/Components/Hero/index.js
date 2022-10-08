@@ -8,10 +8,10 @@ const cloudTwo = require('../../Media/cloudTwo.png')
 const cloudThree = require('../../Media/cloudThree.png')
 const bear = require('../../Media/citycarebear.png')
 
-const metal = require('../../Media/metal.png')
-const paper = require('../../Media/paper.png')
-const glass = require('../../Media/glass.png')
-const plastic = require('../../Media/plastic.png')
+const modalGlass = require('../../Media/glass.png')
+const modalMetal = require('../../Media/metal.png')
+const modalPlastic = require('../../Media/plastic.png')
+const modalPaper = require('../../Media/paper.png')
 
 export default function Hero() {
   const [modalInfo, setModalInfo] = useState({})
@@ -21,20 +21,16 @@ export default function Hero() {
     console.log('material is', material)
     switch (material) {
       case 'glass':
-        console.log('its glass')
-        return glass
+        return modalGlass
         break
       case 'metal':
-        console.log('its metal')
-        return metal
+        return modalMetal
         break
       case 'plastic':
-        console.log('its plastic')
-        return plastic
+        return modalPlastic
         break
       case 'paper':
-        console.log('its paper')
-        return paper
+        return modalPaper
         break
       default:
         console.log('Sorry!!!')
@@ -59,8 +55,8 @@ export default function Hero() {
               X
             </div>
             <img className='modal-bear' src={bear} alt='3d cloud' />
-                      <div className='modal-info'>
-                          <p className="material-label">{modalInfo.material}</p>
+            <div className='modal-info'>
+              <p className='material-label'>{modalInfo.material}</p>
               <img className='modal-material' src={getMaterialImage(modalInfo.material)} />
               <p className='modal-state'>Recyclable</p>
             </div>
