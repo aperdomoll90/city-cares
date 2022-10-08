@@ -12,7 +12,8 @@ export default function UploadButton({setModalInfo,setOpenModal}) {
   }
 
     // Image/File Submit Handler
-    const handleSubmitFile = () => {
+  const handleSubmitFile = () => {
+  
       if (imageData !== null) {
         var data = new FormData();
         data.append("data", imageData);
@@ -35,8 +36,8 @@ export default function UploadButton({setModalInfo,setOpenModal}) {
             alert("Oops! ");
           }
         }, function (e) {
-          setModalInfo(imageData)
-          // setModalInfo('images test')
+          // setModalInfo(imageData)
+          setModalInfo({material:'metal', recyclable:true})
           setOpenModal(true)
       
         });

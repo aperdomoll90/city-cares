@@ -176,14 +176,22 @@
   z-index: 1;
 }
 
-.modal-material{
-    color: var(--darkFont);
-    font-size: 2rem;
-    font-weight: 400;
+.modal-material {
+  height: 20rem;
+  width: auto;
+  position: absolute;
+  top: 5rem;
+}
+
+.material-label {
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 600;
     letter-spacing: 3px;
-    text-transform:capitalize;
+    text-transform: uppercase;
     position: absolute;
-    top: calc(50% - 20%); 
+    top: 5rem;
+    left: 2rem;
 }
 
 .modal-state {
@@ -191,18 +199,18 @@
   font-size: 4rem;
   font-weight: 900;
   letter-spacing: 6px;
-  text-transform:uppercase;
+  text-transform: uppercase;
   position: absolute;
   bottom: 3rem;
 }
 
-.modal-state::before{
-    content: 'It is:' ;
-    color: #000;
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 3px;
-    text-transform:uppercase;
-    position: absolute;
-    top: -2rem;
+.modal-state::before {
+  content: 'It is:';
+  color: #000;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  position: absolute;
+  top: -2rem;
 }

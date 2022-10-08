@@ -14,23 +14,27 @@ const glass = require('../../Media/glass.png')
 const plastic = require('../../Media/plastic.png')
 
 export default function Hero() {
-  const [modalInfo, setModalInfo] = useState({material:'glass', recyclable:true})
-  const [openModal, setOpenModal] = useState(true)
+  const [modalInfo, setModalInfo] = useState({})
+  const [openModal, setOpenModal] = useState(false)
 
-    const getMaterialImage = material => {
-      console.log('material is', material)
+  const getMaterialImage = material => {
+    console.log('material is', material)
     switch (material) {
       case 'glass':
         console.log('its glass')
+        return glass
         break
       case 'metal':
         console.log('its metal')
+        return metal
         break
       case 'plastic':
         console.log('its plastic')
+        return plastic
         break
       case 'paper':
         console.log('its paper')
+        return paper
         break
       default:
         console.log('Sorry!!!')
@@ -55,9 +59,9 @@ export default function Hero() {
               X
             </div>
             <img className='modal-bear' src={bear} alt='3d cloud' />
-            <div className='modal-info'>
-              <p className='modal-material'>{getMaterialImage(modalInfo.material)}</p>
-
+                      <div className='modal-info'>
+                          <p className="material-label">{modalInfo.material}</p>
+              <img className='modal-material' src={getMaterialImage(modalInfo.material)} />
               <p className='modal-state'>Recyclable</p>
             </div>
           </div>
