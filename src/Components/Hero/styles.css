@@ -1,0 +1,95 @@
+.hero-title {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  z-index: 10;
+}
+.hero-comment {
+  color: var(--darkFont);
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 200;
+  letter-spacing: 6px;
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  z-index: 10;
+  width: 35rem;
+}
+.hero-image-container {
+  height: 80%;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: 5;
+}
+.planet {
+  height: 70%;
+  width: auto;
+  position: absolute;
+  top: 15%;
+  z-index: 5;
+  animation: Float 5s infinite ease-in-out alternate;
+}
+
+.cloudOne {
+  height: 8rem;
+  width: auto;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  z-index: 3;
+  animation: moveLeft 15s infinite ease-in-out alternate;
+
+}
+
+.cloudTwo{
+    height: 5rem;
+    width: auto;
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    z-index: 7; 
+}
+
+.cloudThree{
+    height: 12rem;
+    width: auto;
+    position: absolute;
+    bottom: 0%;
+    right: 5%;
+    z-index: 3;  
+    animation: moveRight 15s infinite ease-in-out alternate;
+
+}
+
+@keyframes Float {
+    0% {
+      transform: translateY(5%);
+    }
+    50% {
+      transform: translateY(-5%);
+    }
+  }
+
+  @keyframes moveRight {
+    0% {
+      transform: translateX(-30%);
+    }
+    50% {
+      transform: translateX(20%);
+    }
+  }
+  
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(40%);
+    }
+    50% {
+      transform: translateX(-25%);
+    }
+  }
