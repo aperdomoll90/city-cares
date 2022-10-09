@@ -161,10 +161,18 @@
 
 .modal-mascot {
   height: auto;
-  width: 20rem;
+  width: 15rem;
   position: absolute;
-  bottom: 4rem;
+  bottom: 2rem;
   left: 1rem;
+}
+
+.res-img{
+  height: auto;
+  width: 15rem;
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
 }
 .modal-info {
   height: 100%;
@@ -177,10 +185,10 @@
 }
 
 .modal-material {
-  height: 20rem;
+  height: 15rem;
   width: auto;
   position: absolute;
-  top: 5rem;
+  top: 10rem;
 }
 
 .modal-material-text{

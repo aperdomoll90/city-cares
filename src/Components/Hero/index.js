@@ -17,9 +17,9 @@ const modalPaper = require('../../Media/paper.png')
 export default function Hero() {
   const [modalInfo, setModalInfo] = useState({})
   const [openModal, setOpenModal] = useState(false)
+  const [imageSent, setimageSent] = useState({})
 
   const getMaterialImage = material => {
-    console.log('material is', material)
     switch (material) {
       case 'glass':
         return modalGlass
@@ -48,13 +48,15 @@ export default function Hero() {
         <img className='cloudTwo' src={cloudTwo} alt='3d cloud' />
         <img className='cloudThree' src={cloudThree} alt='3d cloud' />
       </div>
-      <UploadButton setOpenModal={setOpenModal} setModalInfo={setModalInfo} />
+      <UploadButton setOpenModal={setOpenModal} setModalInfo={setModalInfo} setimageSent={setimageSent} />
       {openModal === true && (
         <div className='modal-wrapper'>
           <div className='modal-container'>
             <div className='close-button' onClick={() => setOpenModal(false)}>
               X
             </div>
+            <img className='res-img' src={imageSent} alt='Image sent' />
+
             <img className='modal-mascot' src={modalInfo.recyclable ? bear : seatingFrenchie} alt='3d cloud' />
             <div className='modal-info'>
               <p className='material-label'>{modalInfo.recyclable ? `${modalInfo.material}:`: 'Sorry:'}</p>
