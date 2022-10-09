@@ -13,11 +13,12 @@ const modalGlass = require('../../Media/glass.png')
 const modalMetal = require('../../Media/metal.png')
 const modalPlastic = require('../../Media/plastic.png')
 const modalPaper = require('../../Media/paper.png')
+const trashRacoon = require('../../Media/trashRacoon.png')
 
 export default function Hero() {
   const [modalInfo, setModalInfo] = useState({})
   const [openModal, setOpenModal] = useState(false)
-  const [imageSent, setimageSent] = useState({})
+  const [imageSent, setImageSent] = useState({})
 
   const getMaterialImage = material => {
     switch (material) {
@@ -34,7 +35,7 @@ export default function Hero() {
         return modalPaper
         break
       default:
-        console.log('Sorry!!!')
+       return trashRacoon
     }
   }
 
@@ -48,7 +49,7 @@ export default function Hero() {
         <img className='cloudTwo' src={cloudTwo} alt='3d cloud' />
         <img className='cloudThree' src={cloudThree} alt='3d cloud' />
       </div>
-      <UploadButton setOpenModal={setOpenModal} setModalInfo={setModalInfo} setimageSent={setimageSent} />
+      <UploadButton setOpenModal={setOpenModal} setModalInfo={setModalInfo} setImageSent={setImageSent} />
       {openModal === true && (
         <div className='modal-wrapper'>
           <div className='modal-container'>
