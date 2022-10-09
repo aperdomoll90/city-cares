@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./styles.css";
-export default function UploadButton({ setModalInfo, setOpenModal }) {
+export default function UploadButton({ setModalInfo, setOpenModal, setimageSent }) {
   const [imageData, setInput] = useState();
 
   function uploadImage(e) {
@@ -16,18 +16,14 @@ export default function UploadButton({ setModalInfo, setOpenModal }) {
     if (imageData !== null) {
       var data = new FormData();
       data.append("file", files);
-
+      setimageSent(URL.createObjectURL(files))
+      console.log('file', URL.createObjectURL(files))
       fetch("http://127.0.0.1:5000", {
         method: "POST",
-        // headers: {
-        //   "Content-Type": "multipart/form-data",
-        //   Accept: "application/json",
-        //   type: "formData",
-        // },
         body: data,
       }).then(res => res.json())
         .then(data => {
-          setModalInfo(data, files)
+          setModalInfo(data)
           setOpenModal(true)
         }).catch(err => console.error(err))
     }
