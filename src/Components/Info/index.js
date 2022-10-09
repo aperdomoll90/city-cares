@@ -14,14 +14,14 @@ export default function Index() {
   const [modal, setModal] = useState(false)
   const [url, setUrl] = useState('')
 
-  const openModal = () => {
-    setModal(!modal)
-    setUrl('vhpc0UULjDU')
-  }
-  const openModal2 = () => {
-    setModal(!modal)
-    setUrl('BS-gN6jiXw4')
-  }
+  // const openModal = () => {
+  //   setModal(!modal)
+  //   setUrl('vhpc0UULjDU')
+  // }
+  // const openModal2 = () => {
+  //   setModal(!modal)
+  //   setUrl('BS-gN6jiXw4')
+  // }
 
   return (
     <section className='info-section'>
@@ -78,6 +78,7 @@ export default function Index() {
           alt='trash-can'
           onClick={() => {
             setModal(true)
+            setUrl('N3m_NtQTnfc')
           }}
         />
       </div>
