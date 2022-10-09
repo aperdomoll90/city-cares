@@ -25,7 +25,11 @@ export default function UploadButton({ setModalInfo, setOpenModal, setImageSent 
         .then(data => {
           setModalInfo(data)
           setOpenModal(true)
-        }).catch(err => console.error(err))
+        }).catch(err => {
+          console.error(err)
+          setModalInfo({recyclable:false,material:'trash'})
+          setOpenModal(true)
+        })
     }
   };
 
