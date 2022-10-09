@@ -27,7 +27,7 @@ export default function UploadButton({ setModalInfo, setOpenModal }) {
         body: data,
       }).then(res => res.json())
         .then(data => {
-          setModalInfo(data)
+          setModalInfo(data, files)
           setOpenModal(true)
         }).catch(err => console.error(err))
     }

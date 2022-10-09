@@ -161,6 +161,14 @@
 
 .modal-mascot {
   height: auto;
+  width: 15rem;
+  position: absolute;
+  bottom: 4rem;
+  left: 1rem;
+}
+
+.res-img{
+  height: auto;
   width: 20rem;
   position: absolute;
   bottom: 4rem;

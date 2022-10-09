@@ -55,6 +55,8 @@ export default function Hero() {
             <div className='close-button' onClick={() => setOpenModal(false)}>
               X
             </div>
+            <img className='res-img' src={modalInfo.files} alt='Image sent' />
+{console.log("files", modalInfo.files)}
             <img className='modal-mascot' src={modalInfo.recyclable ? bear : seatingFrenchie} alt='3d cloud' />
             <div className='modal-info'>
               <p className='material-label'>{modalInfo.recyclable ? `${modalInfo.material}:`: 'Sorry:'}</p>
